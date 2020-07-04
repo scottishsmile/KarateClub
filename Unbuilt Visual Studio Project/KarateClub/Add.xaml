@@ -1,0 +1,61 @@
+﻿<Page x:Class="KarateClub.Add"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KarateClub"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="1000"
+      Title="Add">
+
+    <Grid Background="White" Width="1000" Height="550">
+        <TextBlock>           
+            <Hyperlink NavigateUri="C:\KarateClubLogs\Log.txt" RequestNavigate="Hyperlink_Logs">
+            View Logs
+            </Hyperlink>
+        </TextBlock>
+        <Button Content="Home" Click="Button_Home" Margin="796,66,44,459" Height="25" Width="160" FontSize="14" FontWeight="Bold" Background="Gold"/>
+        <Button Content="Delete Member" Click="Button_DeleteMembers" Margin="796,96,44,429" Height="25" Width="160" FontSize="14" FontWeight="Bold" Background="Gold"/>
+        <Image Margin="170,10,242,509" Height="31" Width="338" Source="karatelogo.png"/>
+        <Button Content="Graphs" Click="Button_Graphs" Margin="796,156,44,369" Height="25" Width="160" FontSize="14" FontWeight="Bold" Background="Gold"/>
+        <Image Margin="781,185,29,185" Height="180" Width="190" Source="Karateman.png"/>
+        <Button Content="Update Member" Click="Button_UpdateMembers" Margin="796,126,44,399" Height="25" Width="160" FontSize="14" FontWeight="Bold" Background="Gold"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="27,102,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_firstname" HorizontalAlignment="Left" Margin="97,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="37,133,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_surname" HorizontalAlignment="Left" Margin="96,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ADD NEW MEMBER" HorizontalAlignment="Left" Margin="406,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Door Number:" HorizontalAlignment="Left" Margin="268,103,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_doornum" HorizontalAlignment="Left" Margin="359,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Street Name:" HorizontalAlignment="Left" Margin="276,137,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_streetname" HorizontalAlignment="Left" Margin="359,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="City:" HorizontalAlignment="Left" Margin="321,168,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_city" HorizontalAlignment="Left" Margin="359,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="State:" HorizontalAlignment="Left" Margin="315,200,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="combobox_state" Loaded="ComboBox_Add_State" SelectionChanged="ComboBox_Add_State_eventHandler" HorizontalAlignment="Left" Margin="359,202,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Post Code:" HorizontalAlignment="Left" Margin="288,226,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_postcode" HorizontalAlignment="Left" Margin="359,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Belt:" HorizontalAlignment="Left" Margin="588,102,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="combobox_belt" Loaded="ComboBox_Add_Belt" SelectionChanged="ComboBox_Add_Belt_eventHandler" HorizontalAlignment="Left" Margin="626,105,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Account Type:" HorizontalAlignment="Left" Margin="537,137,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="combobox_accounttype" Loaded="ComboBox_Add_Type" HorizontalAlignment="Left" Margin="626,141,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Join Date:" HorizontalAlignment="Left" Margin="559,168,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="datepicker_joindate" HorizontalAlignment="Left" Margin="626,172,0,0" VerticalAlignment="Top" Width="120" DisplayDate="2020-04-13"/>
+        <Label Content="Membership Active:" HorizontalAlignment="Left" Margin="506,199,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="combobox_memactive" Loaded="ComboBox_Add_MemActive" SelectionChanged="ComboBox_Add_MemActive_eventHandler" HorizontalAlignment="Left" Margin="626,201,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Submit" Click="Button_CreateNewMember" HorizontalAlignment="Left" Margin="359,306,0,0" VerticalAlignment="Top" Width="122" FontWeight="Bold" Background="Gold"/>
+        <Label Name="firstname_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="221,103,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="surname_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="221,132,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="doornum_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="484,104,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="streetname_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="484,139,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="city_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="484,168,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="state_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="484,202,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="postcode_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="484,226,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="belt_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="751,103,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="account_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="751,141,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="joindate_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="751,173,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="memactive_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="751,202,0,0" VerticalAlignment="Top" Height="24" Width="16"/>
+        <Label Name="Submit_ErrorLabel" Content="" HorizontalAlignment="Left" Margin="37,262,0,0" VerticalAlignment="Top" Width="709" Height="39" />
+    </Grid>
+
+</Page>

@@ -1,0 +1,14 @@
+Karate Club Software
+--------------------
+
+Author: Andrew Davies 
+Date: 04 July 2020
+
+Please click "KarateClub" Application to start the program!
+
+
+
+
+
+
+
