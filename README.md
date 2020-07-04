@@ -23,16 +23,16 @@ Dependencies:
 -------------
 
 Live Charts www.lvcharts.net
-using LiveCharts;
-using LiveCharts.Wpf;
+- using LiveCharts;
+- using LiveCharts.Wpf;
 
 
 SQlite www.sqlite.org
-using System.Data.SqlClient;
-using System.Data.SQLite;
+- using System.Data.SqlClient;
+- using System.Data.SQLite;
 
 
 Log4Net   https://logging.apache.org/log4net
-using log4net;
+- using log4net;
 
 
